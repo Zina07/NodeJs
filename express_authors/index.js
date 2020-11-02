@@ -54,7 +54,7 @@ app.listen(port, () => {
 */
 
 /*===================* Exercice_2*===================*/
-const Authors = ['Beowulf', 'Hamlet, Othello, Romeo and Juliet MacBeth', 'Oliver Twist, A Christmas Carol', 'The Picture of Dorian Gray, The Importance of Being'];
+/*const Authors = ['Beowulf', 'Hamlet, Othello, Romeo and Juliet MacBeth', 'Oliver Twist, A Christmas Carol', 'The Picture of Dorian Gray, The Importance of Being'];
 
 
 app.get('/Authors/4/books', (req, res, next) => {
@@ -84,7 +84,7 @@ app.get('/Authors/1/books', (req, res, next) => {
 const port = 3000;
 app.listen(port, () => {
   console.log('Server started on port: ' + port);
-});
+});*/
 
 //========================== CORRECTIONS ========================================//
 
@@ -103,9 +103,13 @@ app.get('/json/authors/:id/', (req, res) => {
         });
     }
 });
+const port = 3000;
+app.listen(port, () => {
+  console.log('Server started on port: ' + port);
+});
 
-app.get('/json/authors/:id/books', (req, res) => {
-    const id = req.params.id;
+//app.get('/json/authors/:id/books', (req, res) => {
+    /*const id = req.params.id;
 
     if (id > authors.length) {
         res.send(`The author with the ID ${id} does not exist`);
@@ -114,14 +118,14 @@ app.get('/json/authors/:id/books', (req, res) => {
 
         res.json({ books });
     }
-});
+}); //
 
 // Pour l'exercice 3
 app.get('*', function (req, res) {
     res.send('Error');
 });
 
-// Run server
+/*Run server
 app.listen(port, () => {
     console.log(`Server started on port: ${port}`);
-});
+});*/
